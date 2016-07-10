@@ -78,4 +78,4 @@ colnames(df) <- lapply(colnames(df), function(x) gsub("\\.$", "", x))
 ##    with the average of each variable for each activity and each subject.
 ################################################################################
 tidy <- aggregate(. ~activity.name + subject.id, df, mean)
-write.table(tidy, "tidy.txt", quote = FALSE)
+write.table(tidy, "tidy.txt", quote = FALSE, row.names = FALSE)
